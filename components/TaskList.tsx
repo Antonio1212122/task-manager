@@ -7,7 +7,7 @@ interface Task {
 }
 
 export default function TaskList({ tasks }: { tasks: Task[] }) {
-  const [taskList, setTaskList] = useState(tasks);
+  const taskList = tasks;
 
   const handleEdit = async (id: number, currentTitle: string) => {
     const title = prompt("Nuevo título:", currentTitle);
